@@ -53,8 +53,10 @@ docker compose up
 > [!NOTE]
 > To run the container in background add -d to the above command.
 
-> [!INFO]
-> First startup downloads EasyOCR models (~2 min). Visit **http://localhost:8000** and upload a screenshot — the viewer will show invisible selectable text once OCR finishes.
+> [!TIP]
+> First startup downloads EasyOCR models (~2 min).
+
+Visit **http://localhost:8000** and upload a screenshot. The viewer will show invisible selectable text once OCR finishes.
 
 ## Anki
 
@@ -103,7 +105,7 @@ notify-send "Mojira" "Screenshot uploaded\n$URL"
 
 Then, after my gaming session, I review all of my screenshots and create Anki cards.
 
-> [!Info]
+> [!TIP]
 > Learn more about my environment at [colechiodo/dotfiles](https://github.com/ColeChiodo/dotfiles)
 
 ## Future Developments
