@@ -1,0 +1,161 @@
+.card {
+  font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: center;
+  color: #e8e6e0;
+  background-color: #1c1c1c;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.hide {
+  display: none;
+}
+
+/* --- Sentence --- */
+.sentence {
+  font-size: 1.5em;
+  line-height: 1.8;
+  margin: 20px 0;
+  letter-spacing: 0.02em;
+  color: #f2f0ea;
+}
+
+.blank {
+  display: inline-block;
+  min-width: 2em;
+  border-bottom: 3px solid #5a5a5a;
+  color: transparent;
+}
+
+.reveal {
+  color: #ff7a6e;
+  font-weight: 700;
+  border-bottom: 3px solid #ff7a6e;
+}
+
+/* --- Translation --- */
+.translation {
+  font-size: 0.85em;
+  color: #a8a8a8;
+  margin: 12px auto 4px;
+  max-width: 480px;
+}
+
+/* --- Divider --- */
+.divider {
+  border: none;
+  border-top: 1px solid #3a3a3a;
+  margin: 28px auto;
+  width: 60%;
+}
+
+/* --- Word breakdown card --- */
+.word-card {
+  background: #262626;
+  border: 1px solid #3a3a3a;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin: 0 auto;
+  max-width: 460px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.audio-row {
+  margin-bottom: 6px;
+}
+
+.word {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.reading {
+  font-size: 1em;
+  color: #9a9a9a;
+  margin-bottom: 12px;
+}
+
+.definition {
+  font-size: 1em;
+  color: #d8d6d0;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.notes {
+  font-size: 0.85em;
+  color: #999;
+  font-style: italic;
+  margin-top: 14px;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-row img {
+  max-width: 100%;
+  max-height: 220px;
+  border-radius: 10px;
+  margin-top: 14px;
+  border: 1px solid #3a3a3a;
+}
+
+/* --- Light mode fallback (if you ever switch off dark mode) --- */
+.card:not(.night_mode):not(.nightMode) {
+  color: #1a1a1a;
+  background-color: #fafaf8;
+}
+
+.card:not(.night_mode):not(.nightMode) .sentence {
+  color: #1a1a1a;
+}
+
+.card:not(.night_mode):not(.nightMode) .blank {
+  border-bottom-color: #c9c9c9;
+}
+
+.card:not(.night_mode):not(.nightMode) .reveal {
+  color: #d64545;
+  border-bottom-color: #d64545;
+}
+
+.card:not(.night_mode):not(.nightMode) .translation {
+  color: #666;
+}
+
+.card:not(.night_mode):not(.nightMode) .divider {
+  border-top-color: #e0ddd5;
+}
+
+.card:not(.night_mode):not(.nightMode) .word-card {
+  background: #ffffff;
+  border-color: #e8e5dc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.card:not(.night_mode):not(.nightMode) .word {
+  color: #1a1a1a;
+}
+
+.card:not(.night_mode):not(.nightMode) .reading {
+  color: #888;
+}
+
+.card:not(.night_mode):not(.nightMode) .definition {
+  color: #333;
+}
+
+.card:not(.night_mode):not(.nightMode) .notes {
+  color: #777;
+}
+
+.card:not(.night_mode):not(.nightMode) .image-row img {
+  border-color: transparent;
+}

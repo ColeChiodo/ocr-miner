@@ -1,0 +1,13 @@
+{
+	"Full Sentence Hidden": sentence, 
+	"Sentence": cloze-body,
+	"Sentence Cloze Prefix": cloze-prefix,
+	"Sentence Cloze Suffix": cloze-suffix,
+	"Translation": glossary-plain-no-dictionary,
+	"Word": expression,
+	"Reading": reading,
+	"Definition": glossary,
+	"Audio": audio,
+	"Image": clipboard-image,
+	"Notes": pitch-accents,
+}

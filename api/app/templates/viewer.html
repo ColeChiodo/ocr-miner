@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Capture {{ capture_id[:8] }}{% endblock %}
+{% block content %}
+<div class="container">
+  <a href="/" class="back-link">&larr; Back</a>
+  <div id="viewer">
+    <div id="image-container">
+      <img id="screenshot" src="/captures-files/{{ capture_id }}/image.png" alt="Screenshot" class="screenshot-img">
+      <div id="overlay"></div>
+    </div>
+  </div>
+  <div class="viewer-toolbar">
+    <p id="status" class="status">
+      {% if ocr_ready %}OCR complete{% else %}OCR processing...{% endif %}
+    </p>
+    <button id="edit-ocr-btn" class="btn-secondary">Edit OCR</button>
+    <button class="btn-secondary" hx-post="/captures/{{ capture_id }}/ocr" hx-trigger="click">Redo OCR</button>
+    <button class="btn-danger" hx-delete="/captures/{{ capture_id }}?redirect=true" hx-confirm="Delete this capture?">Delete</button>
+  </div>
+  <div id="ocr-editor" class="ocr-editor" style="display:none">
+    <h3>Edit OCR Text</h3>
+    <p class="status">Edit the detected text. Bounding boxes are preserved.</p>
+    <div id="ocr-editor-list"></div>
+    <div class="ocr-editor-actions">
+      <button id="ocr-editor-cancel" class="btn-secondary">Cancel</button>
+      <button id="ocr-editor-save" class="btn-primary">Save</button>
+    </div>
+  </div>
+</div>
+<script src="/static/js/overlay.js"></script>
+<script>
+  initOverlay("{{ capture_id }}", {{ ocr_ready | lower }});
+</script>
+{% endblock %}

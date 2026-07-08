@@ -1,0 +1,30 @@
+services:
+  api:
+    image: colechiodo/mojira:api-latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/data
+      - ./frontend/static:/app/static
+      - ./api/app:/app/app
+      - ./shared:/shared
+    environment:
+      - OCR_URL=http://ocr:5000
+      - DATA_DIR=/data
+      - PYTHONPATH=/shared
+    depends_on:
+      - ocr
+    restart: unless-stopped
+
+  ocr:
+    image: colechiodo/mojira:ocr-latest
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/data
+      - ./ocr/app:/app/app
+      - ./shared:/shared
+    environment:
+      - DATA_DIR=/data
+      - PYTHONPATH=/shared
+    restart: unless-stopped

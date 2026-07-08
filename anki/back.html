@@ -1,0 +1,21 @@
+<div class="sentence answer">
+  {{Sentence Cloze Prefix}}<span class="reveal">{{Sentence}}</span>{{Sentence Cloze Suffix}}
+</div>
+
+<div class="translation">{{Translation}}</div>
+
+<div class="hide">{{Full Sentence Hidden}}</div>
+{{tts ja_JP hypertts_preset=Back_realtime_0 voices=HyperTTS:Full Sentence Hidden}}
+
+<hr class="divider">
+
+<div class="word-card">
+  {{#Audio}}<div class="audio-row">{{Audio}}</div>{{/Audio}}
+
+  <div class="word">{{Word}}</div>
+  <div class="reading">{{Reading}}</div>
+  <div class="definition">{{Definition}}</div>
+
+  {{#Notes}}<div class="notes">{{Notes}}</div>{{/Notes}}
+  {{#Image}}<div class="image-row">{{Image}}</div>{{/Image}}
+</div>
