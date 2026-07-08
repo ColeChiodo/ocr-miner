@@ -31,6 +31,9 @@ Thumbs.db
 # Docker
 docker-data/
 
+# Data
+data/
+
 # Config
 *.local
 *.secret
