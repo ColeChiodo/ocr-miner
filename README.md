@@ -50,10 +50,10 @@ Then while in the same folder as the docker-compose.yml run:
 docker compose up
 ```
 
-> [!NOTE]
+> [!TIP]
 > To run the container in background add -d to the above command.
 
-> [!TIP]
+> [!NOTE]
 > First startup downloads EasyOCR models (~2 min).
 
 Visit **http://localhost:8000** and upload a screenshot. The viewer will show invisible selectable text once OCR finishes.
@@ -62,7 +62,7 @@ Visit **http://localhost:8000** and upload a screenshot. The viewer will show in
 
 This pipeline is was made so I can easily make Anki Cards. I use [Yomitan](https://github.com/themoeway/yomitan) to do most of the Anki integration.
 To copy my workflow, do the following:
-1. Install my Anki card template at [/anki](/anki), and connect to Yomitan
+1. Install my Anki card template at [anki/](/anki), and connect to Yomitan
 2. After uploading screenshot, copy the screenshot to your clipboard, and use Yomitan to highlight an unknown word, clicking the green plus.
 
 ![Yomitan Example Screenshot](assets/readme/yomitanexample.png)
