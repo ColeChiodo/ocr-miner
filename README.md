@@ -1,7 +1,9 @@
 ![Logo](assets/logo-whitebg.png)
 # Mojira -「モジラ」 Sentence mining for language learners
 
-**Mojira** is a self-hosted Docker service that accepts screenshots, runs OCR (Japanese), and renders selectable text over the image so [Yomitan](https://github.com/themoeway/yomitan) can look up words for Anki card creation.
+**Mojira** is a self-hosted Docker service that accepts screenshots, runs OCR, and renders selectable text over the image so [Yomitan](https://github.com/themoeway/yomitan) can look up words for Anki card creation.
+
+**This project supports all 80+ languages that EasyOCR supports.**
 
 ## Installation Instructions
 
@@ -40,7 +42,7 @@ services:
 ```
 
 > [!IMPORTANT]
-> `OCR_LANGUAGES` uses the language codes as defined in the [easyocr docs](https://www.jaided.ai/easyocr/).
+> `OCR_LANGUAGES` uses the language codes as defined in the [EasyOCR docs](https://www.jaided.ai/easyocr/).
 
 Create a `captures` folder in your data directory:
 
@@ -92,7 +94,13 @@ Upload → image saved → background task sends to EasyOCR service (2× upscale
 
 Sends a **303 redirect** to the viewer URL on successful upload. No auth required.
 
-## Capture script
+# Capture Clients
+
+| [Arch/Hyprland](https://github.com/ColeChiodo/dotfiles/blob/main/hypr/.config/hypr/scripts/mojira-capture) | [Mojira-nx - Switch Homebrew](https://github.com/ColeChiodo/mojira-nx) |
+|---|---|
+| ![arch client example](assets/readme/arch-client.png) | ![mojira-nx example image](assets/readme/mojira-nx.jpg) |
+
+## Create your own Client.
 
 This is an example capture script that I have added to my Arch Hyprland environment to take screenshots and upload while I play a game using a single Hotkey.
 
@@ -111,10 +119,5 @@ Then, after my gaming session, I review all of my screenshots and create Anki ca
 
 > [!TIP]
 > Learn more about my environment at [colechiodo/dotfiles](https://github.com/ColeChiodo/dotfiles)
-
-## Future Developments
-
-This will remain as a tool designed around my own personal workflow. Some things I want to add:
-- Screenshot upload client for Nintendo Switch Homebrew
 
 **© [colechiodo.cc](https://colechiodo.cc) | MIT License**
