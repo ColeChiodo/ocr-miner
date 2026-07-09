@@ -1,3 +1,6 @@
+import os
 import easyocr
 
-reader = easyocr.Reader(['ja'], gpu=False)
+OCR_LANGUAGES = os.getenv("OCR_LANGUAGES", "ja").split(",")
+
+reader = easyocr.Reader(OCR_LANGUAGES, gpu=False)

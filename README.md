@@ -35,18 +35,22 @@ services:
     environment:
       - DATA_DIR=/data
       - PYTHONPATH=/shared
+      - OCR_LANGUAGES=ja          # Your target language
     restart: unless-stopped
 ```
 
+> [!IMPORTANT]
+> `OCR_LANGUAGES` uses the language codes as defined in the [easyocr docs](https://www.jaided.ai/easyocr/).
+
 Create a `captures` folder in your data directory:
 
-```bash
+```
 mkdir -p data/captures
 ```
 
 Then while in the same folder as the docker-compose.yml run:
 
-```bash
+```
 docker compose up
 ```
 

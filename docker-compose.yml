@@ -27,4 +27,5 @@ services:
     environment:
       - DATA_DIR=/data
       - PYTHONPATH=/shared
+      - OCR_LANGUAGES=ja
     restart: unless-stopped
