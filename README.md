@@ -21,7 +21,7 @@ services:
       - ./api/app:/app/app        # API code (hot-reload)
       - ./shared:/shared          # shared Pydantic schemas
     environment:
-      - OCR_URL=http://ocr:5000
+      - OCR_URL=${OCR_URL:-http://ocr:5000}
       - DATA_DIR=/data
       - PYTHONPATH=/shared
     depends_on:
@@ -30,6 +30,8 @@ services:
 
   ocr:
     image: colechiodo/mojira:ocr-latest
+    ports:
+      - "5000:5000"
     volumes:
       - ./data:/data
       - ./ocr/app:/app/app        # OCR code (hot-reload)
@@ -38,6 +40,7 @@ services:
       - DATA_DIR=/data
       - PYTHONPATH=/shared
       - OCR_LANGUAGES=ja          # Your target language
+      - ATEN_CPU_CAPABILITY=default
     restart: unless-stopped
 ```
 
