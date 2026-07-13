@@ -9,7 +9,7 @@ services:
       - ./api/app:/app/app
       - ./shared:/shared
     environment:
-      - OCR_URL=http://ocr:5000
+      - OCR_URL=${OCR_URL:-http://ocr:5000}
       - DATA_DIR=/data
       - PYTHONPATH=/shared
     depends_on:
@@ -28,4 +28,5 @@ services:
       - DATA_DIR=/data
       - PYTHONPATH=/shared
       - OCR_LANGUAGES=ja
+      - ATEN_CPU_CAPABILITY=default
     restart: unless-stopped
